@@ -13,7 +13,7 @@ Full UML class diagram: https://online.visual-paradigm.com/share.jsp?id=32323338
 ![image](https://github.com/OmarTammam25/JOMT_Mail/assets/96181216/8b641590-ba6e-4bd4-afb8-5c9894a0c6a4)
 ![image](https://github.com/OmarTammam25/JOMT_Mail/assets/96181216/2e4c7308-5e55-4362-8b6c-bfc6680f4bfb)
 
-## UI snippits
+## UI snippets
 ![image](https://github.com/OmarTammam25/JOMT_Mail/assets/96181216/c4daab99-ec4b-4175-b62d-648cecffda31)
 ![image](https://github.com/OmarTammam25/JOMT_Mail/assets/96181216/13768d71-3275-4c7a-a277-25bd1c88e900)
 ![image](https://github.com/OmarTammam25/JOMT_Mail/assets/96181216/29084a4b-2636-4309-b6ea-83520452714f)
