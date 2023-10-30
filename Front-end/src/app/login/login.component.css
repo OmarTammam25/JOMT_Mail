@@ -1,0 +1,152 @@
+@font-face {
+    src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+      format("woff2");
+    font-family: "Meta";
+    font-style: normal;
+    font-weight: normal;
+}
+
+.faded{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color:rgba(2, 0, 108, 0.32); */
+    background: rgb(106,0,255);
+    background: linear-gradient(45deg, rgba(106,0,255,1) 0%, rgba(158,10,255,0.3029586834733894) 24%, rgba(255,158,0,1) 100%);
+    top: 0;left: 0;
+    z-index: 1;
+}
+
+.form{
+    width: 40%;
+    height: 80%;
+    margin: 5%;   
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    z-index: 99;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+}
+
+.text h1, 
+.text h4{
+    font-size: 50px;
+    color: #000;    
+    text-transform: capitalize;
+    text-align: center;
+    font-style: italic;
+    font-weight: bolder;
+    font-family: 'Meta', serif;
+}
+
+.text h4{
+    color: #DDD;
+    font-size: 20px;
+    text-transform: lowercase;
+    font-weight: 200;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    padding: 3em 4em;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.flex div{
+    width: 100%;
+}
+
+
+/* -------------------------------------------- right side -----------------------------------------------*/
+
+.content{
+    width: 60%;
+    height: 100%;
+    padding: 0 2em;
+    position: relative;
+    display: flex;
+    padding: 0 2em;
+    position: relative;
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    /* background: rgb(106,0,255, 0.5); */
+    /* background: linear-gradient(45deg, rgba(106,0,255, 0.5) 0%, rgba(109,10,255, 0.5) 24%, rgba(0,212,255, 0.5) 100%); */
+}
+
+.content h1{
+    height: 40%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-text-stroke: 3px #303030;
+    -moz-text-stroke: 2px #FFF;
+    -o-text-stroke: 2px #FFF;
+    font-variation-settings: "wght" 1000, "ital" 0;
+    font-size: 35vh;
+    color: transparent;
+    font-family: "Meta", 'Playfair Display', serif;
+    transition: text-shadow .5s ease;
+    text-shadow: 15px 15px 0 #fdb560,
+                20px 20px 0 #ff8a01,
+                25px 25px 0 #b96cff,
+                30px 30px 0 #c194fd,
+                40px 40px 20px rgb(211 146 65);
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.content h1:hover{
+    text-shadow: 10px 10px 0 #fdb560, 
+                 15px 15px 0 #ff8a01, 
+                 20px 20px 0 #b96cff, 
+                 25px 25px 0 #c194fd, 
+                 35px 35px 20px rgb(183 125 239 / 60%);
+}
+
+.content h1::after{
+    content: '';
+    position: absolute;
+    bottom: 0%;left: 40%;
+    width: 20%;
+    height: 4px;
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    background: rgb(106,0,255);
+}
+
+.content h1:hover::after{
+    transform: scaleX(2);
+}
+
+
+.content h3{
+    color: #DDD;
+    text-transform: capitalize;
+    padding: 1em 0;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Montserrat', 'Poppins', sans-serif;   
+}
+
+.content button{
+    text-transform: capitalize;
+    color: #FFF;
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.08);
+    transition: all .3s ease-in-out;
+}
+
+.content button:hover{
+    border-color: rgba(255, 255, 255, 0.4);
+    background: transparent;
+}

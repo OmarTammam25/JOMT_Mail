@@ -1,0 +1,8 @@
+<ul>
+  <input #search placeholder="Search" type="search" (keyup)="emitSearch(search.value)">
+  <mat-chip-listbox aria-label="Sorting selection" multiple>
+    <mat-chip-option (selectionChange)="emitSortingAction('priority')">Priority</mat-chip-option>
+    <mat-chip-option (selectionChange)="emitSortingAction('lexi')" color="accent">Alphabetically</mat-chip-option>
+    <mat-chip-option (selectionChange)="emitSortingAction('date')" color="warn">Date</mat-chip-option>
+  </mat-chip-listbox>
+</ul>

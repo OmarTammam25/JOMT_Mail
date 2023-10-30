@@ -1,0 +1,203 @@
+ul{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    z-index: 1;
+    list-style-type: none;
+    padding: 1em;
+    margin: 0;
+}
+
+ul.active{
+    width: 55%;
+}
+
+li{
+    color: #888;
+    border-left: 4px solid rgb(204, 150, 255);
+    font-weight: bold;
+    display: flex;
+    margin: 10px 0;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+li.Unimportant{border-left: 5px solid rgb(92, 255, 42);background:rgba(92, 255, 42, 0.25);}
+li.Normal{border-left: 5px solid rgb(255, 234, 45);background: rgba(255, 234, 45, 0.25);}
+li.Important{border-left: 5px solid rgb(255, 161, 37);background: rgba(255, 161, 37, 0.25)}
+li.Urgent{border-left: 5px solid rgb(255, 39, 39);background: rgba(255, 39, 39, .15);}
+li.UnSet{border-left: 5px solid rgb(34, 222, 255);background: rgba(34, 222, 255, 0.25)}
+
+.flex input[type="checkbox"]:checked + .flex{
+    outline: 10px solid red;
+}
+
+li:hover{
+    color: #333;
+    box-shadow: 1px 3px 10px 2px #bdbdbd;
+}
+
+li:hover h2{
+    color: #000;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: auto;
+}
+.flex.col{flex-direction: column;width: 100%;}
+
+li.flex h2{
+    color: #373e42;
+    text-transform: capitalize;
+    padding: 0 0 0 .6em;
+    width: 40%;
+    font-size: 200% !important;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: 'Montserrat', 'Poppins', sans-serif;   
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+    
+    /*---- override angular styling ----*/
+    /* font-size: 1.3em !important; */
+    margin-block-start: 0.83em !important;
+    margin-block-end: 0.83em !important;
+    margin-inline-start: 0px !important;
+    margin-inline-end: 0px !important;
+}
+
+li.flex p{
+    text-transform: capitalize;
+    padding-left: 2em;
+    width: 40%;
+    font-size: 130%;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    /*---- override angular styling ----*/
+    margin-block-start: 1em !important;
+    margin-block-end: 1em !important;
+    margin-inline-start: 0px !important;
+    margin-inline-end: 0px !important;
+}
+
+li.flex span{
+    width: 10%;
+    font-size: 120%;
+    padding-left: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+li.flex input{
+    margin: 0 1em 0 0;
+    border: 10px solid #333;
+}
+
+#pagination *{
+    background: transparent;
+}
+
+#pagination * * *{
+    justify-content: center;
+}
+
+#pagination .allMails{
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----------------------------------------------   mail preview   ------------------------------------------------*/
+
+.mailPreview{
+    display: none;
+    overflow: auto;
+    position: relative;
+    transition: all 1s ease-in-out;
+}
+
+.mailPreview.active{
+    width: 45%;
+    display: block;
+    padding: 1em;
+    margin: 1em;
+    border-left: 2px solid #000;
+}
+
+.mailPreview.active .icons{
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.mailPreview.active .icons button{
+    transition: all .4s ease-in-out;
+    margin: 0 2px;
+}
+.mailPreview.active .icons button:hover{
+    background: #DDD;
+}
+
+.mailPreview.active img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.mailPreview.active h2,
+.mailPreview.active h4{
+    color: #373e42;
+    width: 100%;
+    height: 100%;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    padding: 0 0 0 10px;
+    margin: 0;
+    font-weight: bold;
+    font-family: 'Montserrat', 'Poppins', sans-serif;   
+}
+
+.mailPreview.active h4{
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;   
+}
+
+.mailPreview.active p{
+    text-transform: capitalize;
+    padding: 2em calc(0.7em + 60px);
+    box-sizing: border-box;
+    
+    /*---- override angular styling ----*/
+    margin-block-start: 1em !important;
+    margin-block-end: 1em !important;
+    margin-inline-start: 0px !important;
+    margin-inline-end: 0px !important;
+}
+
+.mailPreview.active .attachment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mailPreview.active a{
+    color: blueviolet;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif; 
+    transition: all .2s ease-in-out;  
+}
+
+.mailPreview.active a:hover,
+.mailPreview.active a:focus{
+    color: #CA4B7C;    
+}

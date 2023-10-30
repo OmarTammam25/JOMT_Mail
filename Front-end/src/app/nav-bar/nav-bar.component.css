@@ -1,0 +1,46 @@
+ul{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 10px;    
+}
+
+ul > *{
+    margin: 0 5px;
+}
+
+li{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0;
+    margin: 0 1em;
+    color: #444;
+    border: 1px solid #888;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+li svg{
+    width: 1em;
+    height: 1em;
+    padding: 0 .5em;
+}
+
+input[type="search"]{
+    background: rgb(178, 218, 155);
+    border: 1px solid #333;
+    height: 28px;
+    color: #333;
+    padding-left: 15px;
+    border-radius: 40px;
+    transition: all .2s ease-in-out;
+}
+
+input[type="search"]:hover,
+input[type="search"]:focus{
+    background: rgb(205, 243, 183);
+}

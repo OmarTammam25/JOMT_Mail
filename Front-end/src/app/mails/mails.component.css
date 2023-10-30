@@ -1,0 +1,47 @@
+
+button{
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    transition: all .3s ease-in-out;
+}
+button.active{left: 6%}
+
+app-side-bar{
+    padding: 0;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    transform: translateX(-150%);
+    transition: all .4s ease-in-out;
+    z-index: 99;
+}
+
+app-side-bar.active{
+    width: auto;
+    background: #FFF;
+    transform: translateX(0);
+}
+
+app-side-bar.active:hover{
+    width: auto;
+    background: #EEE;
+}
+
+app-inbox{
+    width: 100%;
+    height: 88%;  
+    display: flex;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+app-inbox.active{padding-left: 5%;}
+
+app-nav-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 .5em;
+}

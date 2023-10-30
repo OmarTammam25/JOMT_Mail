@@ -1,0 +1,17 @@
+app-mails{
+    width: 100%;
+    display: flex;
+}
+
+app-login{
+    width: 100%;
+    display: flex;
+    justify-content: center
+}
+
+app-register{
+    width: 100%;
+    display: flex;
+    background: #333;
+    justify-content: center
+}
