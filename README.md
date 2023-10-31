@@ -19,3 +19,7 @@ Full UML class diagram: https://online.visual-paradigm.com/share.jsp?id=32323338
 ![image](assets/demo1.png)
 ![image](assets/demo2.png)
 
+
+
+https://github.com/OmarTammam25/JOMT_Mail/assets/96181216/aee2c76d-020c-4453-bb8d-c21288b8da57
+
