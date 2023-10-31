@@ -1,38 +1,36 @@
 package com.accursed.mailserver.models;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Timestamp;
+import java.util.Set;
 
 @Entity
 @Setter
 public class DraftMail extends Mail {
 
-    public DraftMail(User from,
-                     User to,
+    public DraftMail(String from,
+                     String to,
                      String subject,
                      String content,
                      Timestamp timestamp,
                      String state,
                      boolean isStarred,
                      int priority,
-                     String senderID,
-                     String receiverID) {
-        super(from, to, subject, content, timestamp, state, isStarred, priority);
+                     Set<Attachment> attachment) {
+        super(from, to, subject, content, timestamp, state, isStarred, priority, attachment);
     }
 
     public void setId(String id) {
         this.id = id;
     }
 
-    public void setMailFrom(User mailFrom) {
+    public void setMailFrom(String mailFrom) {
         this.mailFrom = mailFrom;
     }
 
-    public void setMailTo(User mailTo) {
+    public void setMailTo(String mailTo) {
         this.mailTo = mailTo;
     }
 
@@ -60,6 +58,13 @@ public class DraftMail extends Mail {
         this.priority = priority;
     }
 
+    public void setAttachments(Set<Attachment> attachments){
+        this.attachments = attachments;
+    }
+
+    public  void setFolders(Set<Folder> folders){
+        this.folders = folders;
+    }
 
     public DraftMail() {
         super();

@@ -1,5 +1,7 @@
 package com.accursed.mailserver.dtos;
 
+import java.util.HashMap;
+
 public class UserDTO {
     public boolean requestState;
     public String id;
@@ -10,4 +12,5 @@ public class UserDTO {
     public String password;
     public String requestMessage;
 
+    public HashMap<String, String> folderNames;
 }

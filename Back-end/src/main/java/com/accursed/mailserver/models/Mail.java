@@ -2,12 +2,10 @@ package com.accursed.mailserver.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
 
 import java.sql.Timestamp;
+import java.util.Set;
 
 
 @Entity
@@ -17,14 +15,13 @@ public abstract class Mail {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     protected String id;
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(referencedColumnName = "id")
+    protected String mailFrom; // email
+    protected String mailTo; // email
+    @ManyToMany(mappedBy = "mails")
     @JsonIgnore
-    protected User mailFrom;
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(referencedColumnName = "id")
-    @JsonIgnore
-    protected User mailTo;
+    protected Set<Folder> folders;
+    @OneToMany(mappedBy = "mail")
+    protected Set<Attachment> attachments;
     protected String subject;
     protected String content;
     protected Timestamp timestamp;
@@ -32,7 +29,9 @@ public abstract class Mail {
     protected Boolean isStarred;
     protected Integer priority;
 
-    public Mail(User mailFrom, User mailTo, String subject, String content, Timestamp timestamp, String state, boolean isStarred, int priority) {
+    public Mail(String mailFrom, String mailTo, String subject, String content,
+                Timestamp timestamp, String state, boolean isStarred,
+                int priority, Set<Attachment> attachments) {
         this.mailFrom = mailFrom;
         this.mailTo = mailTo;
         this.subject = subject;
@@ -41,11 +40,17 @@ public abstract class Mail {
         this.state = state;
         this.isStarred = isStarred;
         this.priority = priority;
+        this.attachments = attachments;
+    }
+    public void deleteFromFolder(Folder folder){
+        folders.remove(folder);
     }
 
-    public Mail() {
+    public Mail() {}
 
-    }
+//    public void addFolder(Folder folder) {
+//        folders.add(folder);
+//    }
 
 //    public Mail() {
 //
