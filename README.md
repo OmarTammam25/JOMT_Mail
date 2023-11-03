@@ -8,7 +8,7 @@ For the full report see embedded pdf file:
 Full UML class diagram: https://online.visual-paradigm.com/share.jsp?id=323233383633342d35#diagram:workspace=zkbbzfyt&proj=0&id=5
 
 ![image](assets/UML1.png)
-![image]assets/UML2.png)
+![image](assets/UML2.png)
 ![image](assets/UML3.png)
 ![image](assets/UML4.png)
 ![image](assets/UML5.png)
